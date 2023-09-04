@@ -1,0 +1,12 @@
+{
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.19.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "start": "esbuild --bundle src/index.jsx --outfile=index.js --servedir=./ --watch",
+    "build": "esbuild --bundle src/index.jsx --outfile=index.js"
+  }
+}
