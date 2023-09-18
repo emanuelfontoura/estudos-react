@@ -39,7 +39,7 @@ const App = () => {
     <div style={{marginTop: '30px'}}>Nome: {dados.cliente}</div>
     <div>Idade: {dados.idade}</div>
     <div>Situação: {' '}
-      <span style={{color: dados.ativa ? 'green' : 'red'}}>{dados.ativa ? 'Ativa' : 'Inativa'}</span>
+      <span style={{color: dados.ativa ? 'green' : 'red'}}> {dados.ativa ? 'Ativa' : 'Inativa'} </span>
     </div>
     <div>Total gasto: R$ {total}</div>
     <div>{total >= 5000 ? 'Você está gastando muito!': 'Você não está gastando muito.'}</div>
