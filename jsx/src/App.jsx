@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './Header.jsx'
 
 const title = <h1>TÍTULO</h1>
 
@@ -23,6 +24,7 @@ function App() {
     {[1, 2, 3]}
     {'OLÁ'}
     {data.getDate()}
+    <Header />
   </>
 }
 
