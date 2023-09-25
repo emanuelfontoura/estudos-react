@@ -8,7 +8,7 @@ const linkStyle = {
 }
 
 const Link = ({href, text, ...props}) => {
-  return <li style={linkStyle}><a href="href" {...props}>{text}</a></li>
+  return <li style={linkStyle}><a href={href} {...props}>{text}</a></li>
 }
 
 export default Link
