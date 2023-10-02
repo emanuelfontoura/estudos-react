@@ -1,10 +1,19 @@
 import React from 'react'
 
 const Estados = () => {
-  const estado = false; // true = ativo; false = desativo;
+  let estado = false; // true = ativo; false = desativo;
+
+  function handleClick(){
+    if(estado === true){
+      estado = false
+    }else{
+      estado = true
+    }
+    console.log(estado)
+  }
 
   return <div>
-    <button disabled={!estado}>{estado?'ATIVO':'DESATIVO'}</button>
+    <button onClick={handleClick}>{estado?'ATIVO':'DESATIVO'}</button>
   </div>
 }
 
