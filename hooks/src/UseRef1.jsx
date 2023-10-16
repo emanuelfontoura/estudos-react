@@ -24,7 +24,6 @@ const UseRef1 = () => {
       {comentario.map(coment => <li key={coment}>{coment}</li>)}
     </ul>
     <input onKeyDown={handleKeyDown} ref={inputRef} type="text" value={input} onChange={(event) => setInput(event.target.value)}/>
-    {console.log(input)}
     <button onClick={handleClick}>Enviar</button>
   </div>
 }
