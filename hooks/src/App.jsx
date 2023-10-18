@@ -9,8 +9,14 @@ import UseCallback from './UseCallback'
 import UserContext from './UserContext'
 import ProdutoContext from './ProdutoContext'
 import {GlobalStorage} from './GlobalContext'
+import useLocalStorage from './CustomHooks1'
 
 function App() {
+  const [product, setProduct] = useLocalStorage('produto', '')
+  function handleClick({target}){
+   setProduct(target.innerText) 
+  }
+
   return <GlobalStorage>
     <div>
       <Estados />
@@ -21,6 +27,8 @@ function App() {
       <UseMemo />
       <UseCallback />
       <ProdutoContext />
+      <button onClick={handleClick}>notebook</button>
+      <button onClick={handleClick}>smartphone</button>
     </div>
   </GlobalStorage>
 }

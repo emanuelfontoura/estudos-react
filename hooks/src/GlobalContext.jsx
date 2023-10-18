@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GlobalContext = React.createContext()
+export const GlobalContext = React.createContext()
 
 export const GlobalStorage = ({children}) => {
   return <GlobalContext.Provider value={{nome: 'Emanuel'}}>{children}</GlobalContext.Provider>
