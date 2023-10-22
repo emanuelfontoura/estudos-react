@@ -10,6 +10,7 @@ import UserContext from './UserContext'
 import ProdutoContext from './ProdutoContext'
 import {GlobalStorage} from './GlobalContext'
 import useLocalStorage from './CustomHooks1'
+import useFetchUso from './useFetchUso'
 
 function App() {
   const [product, setProduct] = useLocalStorage('produto', '')
@@ -19,6 +20,7 @@ function App() {
 
   return <GlobalStorage>
     <div>
+      <useFetchUso />
       <Estados />
       <UseState2 />
       <UseEffect1 />
