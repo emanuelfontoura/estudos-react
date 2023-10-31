@@ -53,6 +53,11 @@ function App() {
     return {...acc, [field.id]:''}
   }, {}))
 
+  const form2 = {
+    nome:'',
+    email:''
+  }
+
   const [response, setResponse] = React.useState(null)
 
   function handleChange(event){
