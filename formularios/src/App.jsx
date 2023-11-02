@@ -4,6 +4,8 @@ function App() {
   const [msg, setMsg] = React.useState('')
   const [select, setSelect] = React.useState('')
   const [radio, setRadio] = React.useState('')
+  const [checkbox, setCheckbox] = React.useState(false)
+  const [cores, setCores] = React.useState([])
 
   const [form, setForm] = React.useState({
     nome:'',
@@ -18,6 +20,18 @@ function App() {
   function handleSubmit(e){
     e.preventDefault()
     console.log(form.nome)
+  }
+
+  function handleChangeCores({target}){
+    if(target.checked){
+      setCores([...cores, target.value])
+    }else{
+      setCores(cores.filter(cor => cor != target.value))
+    }
+  }
+
+  function handleChecked(cor){
+    return cores.includes(cor)
   }
 
   return <>
@@ -53,10 +67,32 @@ function App() {
         Tablet
       </label>
 
+    {/* CHECKBOX */}
+      <label>
+        Li os termos
+        <input type="checkbox" name="termos" id="termos" value="Termos" checked={checkbox} onChange={({target}) => setCheckbox(target.checked)} />
+      </label>
+
+    {/* MÚLTIPLOS CHECKBOX */}
+      <div>
+        <label>
+          <input type="checkbox" checked={handleChecked('azul')} value="azul" onChange={handleChangeCores}/>
+          Azul
+        </label>
+
+        <label>
+          <input type="checkbox" checked={handleChecked('vermelho')} value="vermelho" onChange={handleChangeCores}/>
+          Vermelho
+        </label>
+
+        <label>
+          <input type="checkbox" checked={handleChecked('verde')} value="verde" onChange={handleChangeCores}/>
+          Verde
+        </label>
+      </div>
+
       <button type="submit">ENVIAR</button>
     </form>
-    <p>{form.nome}</p>
-    <p>{form.email}</p>
   </>
 }
 

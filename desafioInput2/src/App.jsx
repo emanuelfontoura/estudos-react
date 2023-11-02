@@ -53,16 +53,12 @@ function App() {
     return {...acc, [field.id]:''}
   }, {}))
 
-  const form2 = {
-    nome:'',
-    email:''
-  }
-
   const [response, setResponse] = React.useState(null)
 
   function handleChange(event){
     const {id, value} = event.target
     setForm({...form, [id]:value})
+    console.log(form)
   }
 
   function handleSubmit(event){
