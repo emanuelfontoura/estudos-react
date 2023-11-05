@@ -1,4 +1,8 @@
 import React from 'react'
+import ComponentesInput from './ComponentesInput'
+import ComponenteSelect from './ComponenteSelect'
+import ComponenteRadio from './ComponenteRadio'
+import ComponenteCheckbox from './ComponenteCheckbox'
 
 function App() {
   const [msg, setMsg] = React.useState('')
@@ -11,6 +15,11 @@ function App() {
     nome:'',
     email: ''
   })
+
+  const [cmptInpt, setCmptInpt] = React.useState('')
+  const [componenteSelect, setComponenteSelect] = React.useState('')
+  const [componenteRadio, setComponenteRadio] = React.useState('Masculino')
+  const [componenteCheckbox, setComponenteCheckbox] = React.useState([])
 
   function handleChange(event){
     const {id, value} = event.target
@@ -90,6 +99,21 @@ function App() {
           Verde
         </label>
       </div>
+
+      <ComponentesInput id='cmptInpt' label='COMPONENTE INUPUT' setValue={setCmptInpt} value={cmptInpt}/>
+
+      {cmptInpt}
+
+      <ComponenteSelect options={['Smartphone', 'Tablet', 'Notebook']} value={componenteSelect} setValue={setComponenteSelect}/>
+
+      {componenteSelect}
+
+      <ComponenteRadio name='sexo' value={componenteRadio} setValue={setComponenteRadio} options={['Masculino', 'Feminino']}/>
+
+      {componenteRadio}
+
+      <h1>Componente Checkbox</h1>
+      <ComponenteCheckbox options={['Banana', 'Pêra', 'Maçã']} value={componenteCheckbox} setValue={setComponenteCheckbox}/>
 
       <button type="submit">ENVIAR</button>
     </form>
