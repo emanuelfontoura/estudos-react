@@ -1,6 +1,6 @@
 import React from 'react'
 
-function App() {
+const App = () => {
   const formFields = [
     {
       type: "text",
