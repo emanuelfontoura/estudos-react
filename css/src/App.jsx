@@ -1,6 +1,7 @@
 import React from 'react'
 import Produto from './Components/Produto.jsx'
-import styled from 'styled-components'
+import styled from 'styled-components' /* STYLED COMPONENTS */
+import Card from 'react-bootstrap/Card' /* REACT BOOTSTRAP */
 
 const Titulo = styled.h1`
     font-size: 1,5rem;
@@ -19,6 +20,7 @@ const CorVariavel = styled.p`
   font-size: ${({tamanhoFonte}) => tamanhoFonte};
   color: ${({corLetra}) => corLetra};
   padding: ${({padding}) => padding};
+  margin: ${({margin}) => margin};
   &:hover{
     font-size: 2rem;
   }
@@ -41,8 +43,25 @@ function App() {
   return <>
     <Titulo>Produto 1</Titulo> 
     <Paragrafo>Este produto é um dispostivo</Paragrafo>
-    <CorVariavel ativo={ativo} onClick={() => setAtivo(!ativo)} cor="red" tamanhoFonte="1.5rem" corLetra="white" padding="1rem" >COR VARIÁVEL</CorVariavel>
+    <CorVariavel ativo={ativo} onClick={() => setAtivo(!ativo)} cor="red" tamanhoFonte="1.5rem" corLetra="white" padding="1rem" margin="15px" >COR VARIÁVEL</CorVariavel>
     <Produto />
+
+    <div className='card bg-dark text-white m-5'> {/* BOOTSTRAP */}
+      <div className='card-header'>Notebook</div>
+      <div className='card-body'>
+        <h5 className='card-title'></h5>
+      </div>
+    </div>
+
+    <div> {/* REACT BOOTSTRAP */}
+      <Card bg='dark' text='white' className='m-5' style={{ maxWidth: '18rem' }}>
+        <Card.Header>Notebook</Card.Header>
+        <Card.Body>
+          <Card.Title>R$ 2500</Card.Title>
+          <Card.Text>Produto inovador!</Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
   </>
 }
 
