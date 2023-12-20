@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './Slide.module.css'
+import styles from './Slide.module.css';
 
 const Slide = ({ slides }) => {
     const [slider, setSlider] = React.useState(0)

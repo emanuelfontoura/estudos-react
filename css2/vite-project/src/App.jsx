@@ -1,7 +1,11 @@
-import React from 'react'
-import Slide from './Components/Slide.jsx'
+import React from 'react';
+import Slide from './Components/Slide.jsx';
+import Foto from './img/foto.jpg?react';
+import Dog from './Components/Dog.jsx';
 
 function App() {
+  const [olho, setOlho] = React.useState(0)
+
   const slides = [
     {
       id: 'slide1',
@@ -21,8 +25,19 @@ function App() {
     }
   ]
 
+  const mostrarOlho = () => {
+    for(let i = 0; i < 6; i++){
+      setTimeout(() => {
+        setOlho(i)
+      }, 100 * i)
+    }
+  }
+
   return <>
     <Slide slides={slides} />
+    <button onClick={mostrarOlho}>Mostrar olho</button>
+    <Dog color="red" olho={olho}/>
+    <img src={Foto} alt="Foto" />
   </>
 }
 
