@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Routes, Route, NavLink, useLocation} from 'react-router-dom'
+import {BrowserRouter, Routes, Route, NavLink} from 'react-router-dom'
 import Sobre from './Sobre.jsx'
 import Home from './Home.jsx'
 import Contato from './Contato.jsx'
@@ -28,7 +28,7 @@ function App() {
           <Route path='contato' element={<Contato />} />
           <Route path='*' element={<NaoEncontrada />} />
           <Route path='login' element={<Login />} />
-          <Route path='produto/:id' element={<Produto />} />
+          <Route path='produto/:id/*' element={<Produto />} />
         </Routes>
       </BrowserRouter>
     </div>
