@@ -1,7 +1,5 @@
 import React from "react";
-import { NavLink, Routes, Route } from "react-router-dom";
-import Produtos from "./Produtos.jsx";
-import Contato from "./Contato.jsx";
+import { NavLink } from "react-router-dom";
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -16,11 +14,6 @@ const Header = () => {
                 </li>
             </ul>
         </nav>
-
-        <Routes>
-            <Route path="/" element={<Produtos />}/>
-            <Route path="contato" element={<Contato />}/>
-        </Routes>
     </>
 }
 

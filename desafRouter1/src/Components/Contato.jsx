@@ -3,7 +3,7 @@ import Head from "./Head.jsx";
 
 const Contato = () => {
     return <>
-        <Head title="Contato" description="Página de contato" />
+        <Head title="Ranek | Contato" description="Página de contato" />
         <h1>Contato</h1>
     </>
 }

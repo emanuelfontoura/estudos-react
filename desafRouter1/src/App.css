@@ -17,3 +17,10 @@ a{
 h1{
     font-size: 1.4rem;
 }
+
+.content{
+    max-width: 500px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

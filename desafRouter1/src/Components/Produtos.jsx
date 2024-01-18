@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './Produtos.module.css'
 import Head from "./Head.jsx";
+import {Link} from 'react-router-dom'
 
 const Produtos = () => {
     const [produtos, setProdutos] = React.useState(null)
@@ -14,12 +15,19 @@ const Produtos = () => {
         fetchData().catch(console.error)
     }, [])
 
+    console.log(produtos)
+
     if(produtos === null) return null
     return <>
-        <Head title="Produtos" description="Página de produtos" />
-        <div className={styles.produtos}>
-            <h1>Produtos</h1>
-        </div>
+        <Head title="Ranek | Produtos" description="Página de produtos" />
+        <section className={styles.produtos}>
+            {produtos.map(produto => {
+                return <Link to={`produto/${produto.id}`} key={produto.id}>
+                    <img src={produto.fotos[0].src} alt={produto.fotos[0].titulo} />
+                    <h1>{produto.nome}</h1>
+                </Link>
+            })}
+        </section>
     </> 
 }
 
