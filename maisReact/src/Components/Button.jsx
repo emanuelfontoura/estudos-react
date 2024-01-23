@@ -21,7 +21,8 @@ Button.defaultProps = {
 Button.PropTypes = {
     margin: PropTypes.string.isRequired,
     width: PropTypes.number,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    text: PropTypes.string
 }
 
 export default Button
