@@ -3,6 +3,7 @@ import './App.css'
 import Button from './Components/Button.jsx'
 import Header from './Components/Header.jsx'
 import Exemplo from './Components/Exemplo.jsx'
+import Produtos from './Components/Produtos.jsx'
 const Contato = React.lazy(() => import('./Components/Contato.jsx'))
 
 const reducer = (state, action) => {
@@ -40,6 +41,8 @@ function App() {
     <button onClick={() => dispatch('diminuir10')}>-10</button>
     <button onClick={() => dispatch('aumentar10')}>+10</button>
     <Exemplo />
+    <h1>Classes</h1>
+    <Produtos title='Meus produtos' />
   </>
 }
 
