@@ -1,7 +1,7 @@
 import React from 'react'
 import {GlobalContext} from './GlobalContext'
 
-const ProdutoContext = () => {
+const ProdutoContext = ({cor, ...restante}) => {
   const dados = React.useContext(GlobalContext)
   return <>
     {dados.nome}
