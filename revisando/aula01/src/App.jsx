@@ -1,4 +1,5 @@
 import React from 'react';
+import Teste from './Teste';
 
 function App() {
   const formFields = [
@@ -60,6 +61,7 @@ function App() {
         </div>
         <button type="submit">ENVIAR</button>
       </form>
+      <Teste k="sei la" />
     </>
   );
 }
