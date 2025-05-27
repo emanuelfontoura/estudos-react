@@ -7,6 +7,7 @@ import Contato from './Contato.jsx';
 import NotFound from './NotFound.jsx';
 import Produto from './Produto.jsx';
 import Footer from './Footer.jsx';
+import EditarProduto from './EditarProduto';
 
 function App() {
   return (
