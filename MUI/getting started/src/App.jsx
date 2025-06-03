@@ -1,18 +1,20 @@
 import React from 'react';
-import AppRoutes from './AppRoutes';
 import { BrowserRouter } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer.jsx';
+import AppRoutes from './shared/routes/AppRoutes';
+import Header from './shared/components/Header.jsx';
+import Footer from './shared/components/Footer.jsx';
+import { ThemeProvider } from '@emotion/react';
+import { LightTheme } from './shared/themes/Light.js';
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={LightTheme}>
       <BrowserRouter>
         <Header />
         <AppRoutes />
         <Footer />
       </BrowserRouter>
-    </>
+    </ThemeProvider>
   );
 }
 
